@@ -22,8 +22,8 @@ list_books() {
 remove_book() {
     echo "Enter book title to remove:"
     read title_to_remove
-    if grep -q "$title_to_remove" "$library_file"; then
-        grep -v "$title_to_remove" "$library_file" > temp.txt
+    if grep -q "$title__remove" "$library_file"; then
+        grep -v "$title_remove" "$library_file" > temp.txt
         mv temp.txt "$library_file"
         echo "Book removed successfully!"
     else
@@ -45,7 +45,7 @@ do
         1) add_book ;;
         2) list_books ;;
         3) remove_book ;;
-        4) echo "Exiting the program."
+        4) echo "Exit."
            break ;;
         *) echo "Invalid choice. Please enter a valid option." ;;
     esac
